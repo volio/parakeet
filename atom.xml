@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Parakeet</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://niconiconi.net/"/>
+  <updated>2019-12-31T05:11:06.201Z</updated>
+  <id>https://niconiconi.net/</id>
+  
+  <author>
+    <name>volio</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>你好，世界</title>
+    <link href="https://niconiconi.net/2019/12/31/hello-world/"/>
+    <id>https://niconiconi.net/2019/12/31/hello-world/</id>
+    <published>2019-12-31T04:39:00.000Z</published>
+    <updated>2019-12-31T05:11:06.201Z</updated>
+    
+    <content type="html"><![CDATA[<p>使用 hexo 进行写作</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;使用 hexo 进行写作&lt;/p&gt;
+
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+</feed>
