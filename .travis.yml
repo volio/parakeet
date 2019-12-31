@@ -1,0 +1,30 @@
+language: node_js
+
+node_js:
+  - lts/*
+
+install:
+  - npm install -g hexo-cli
+  - hexo init workspace
+  - cd workspace
+  - npm install
+  - git clone https://github.com/volio/saki.li.git themes/saki.li
+  - yarn add hexo-excerpt
+  - yarn add hexo-generator-feed
+  - cp ../_config.yml _config.yml
+  - rm -rf source/_posts
+  - cp -r ../posts source/_posts
+
+script:
+  - hexo clean
+  - hexo generate
+
+deploy:
+  - provider: pages
+    skip-cleanup: true
+    local_dir: workspace/public
+    github-token: $GITHUB_TOKEN # a token generated on github allowing travis to push code on you repository
+    keep-history: true
+    target_branch: html
+    on:
+      branch: master
