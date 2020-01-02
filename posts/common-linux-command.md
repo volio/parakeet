@@ -31,5 +31,5 @@ redis-cli -h 127.0.0.1 -p 6379 -a "password"
 安装 Docker
 
 ```
-curl -fsSL https://get.docker.com -o get-docker.sh
+curl -fsSL https://get.docker.com -o get-docker.sh | sh get-docker.sh
 ```
