@@ -12,6 +12,7 @@ install:
   - yarn add hexo-excerpt
   - yarn add hexo-generator-feed
   - cp ../_config.yml _config.yml
+  - cp ../_theme.yml themes/saki.li/_config.yml
   - rm -rf source/_posts
   - cp -r ../posts source/_posts
 

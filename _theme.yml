@@ -1,0 +1,7 @@
+menu:
+  Home: /
+  Archives: /archives
+  RSS: /atom.xml
+
+excerpt: true
+always_mobile_layout: true

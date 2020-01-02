@@ -87,3 +87,6 @@ theme: saki.li
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: ''
+
+disqus_shortname: parakeets
+disqus_apikey: 3pn2LVaLGvYCddTYPQ54Q3XR1mkOKdKlyTLf1QePJcTUljCIjObDLIj4Adz4oswp
