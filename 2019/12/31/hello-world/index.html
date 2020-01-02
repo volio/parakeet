@@ -68,7 +68,7 @@
 
 <div class="post-comment">
     
-<section id="comments">
+<section id="comments" class="comments">
     <div id="disqus_thread"></div>
     <script async crossorigin src="https://cdn.jsdelivr.net/npm/disqusjs@1.2.6/dist/disqus.js" id="disqusjs-script"></script>
     <script>
@@ -78,6 +78,7 @@
                     new DisqusJS({
                         shortname: "parakeets",
                         siteName: "Parakeet",
+                        api: "https://disqus.niconico.in/api/",
                         apikey: "3pn2LVaLGvYCddTYPQ54Q3XR1mkOKdKlyTLf1QePJcTUljCIjObDLIj4Adz4oswp",
                     })
                 }

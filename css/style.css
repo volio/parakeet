@@ -191,6 +191,9 @@ body {
   text-decoration: none;
   color: #808080;
 }
+.comments {
+  padding-bottom: 1em;
+}
 .posts .post-title {
   font-size: 1.5em;
   justify-content: center;
