@@ -64,7 +64,7 @@
 </ul>
 <h3 id="频率限制"><a href="#频率限制" class="headerlink" title="频率限制"></a>频率限制</h3><p>StartLimitIntervalSec 用于指定一个重启间隔，默认为 10。StartLimitBurst 指在上述重启间隔内进程最多重启的次数。</p>
 <h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><p>综合以上三个参数，给出的示例配置如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">StartLimitIntervalSec&#x3D;14400</span><br><span class="line">StartLimitBurst&#x3D;10</span><br><span class="line">Restart&#x3D;on-failure</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs plain">StartLimitIntervalSec&#x3D;14400<br>StartLimitBurst&#x3D;10<br>Restart&#x3D;on-failure<br></code></pre></td></tr></table></figure>
 
 <p>代表 14400 秒内最多允许进程重启十次，当非正常退出时重启。</p>
         <a class="More" href="/2020/01/07/systemd/">查看全文</a>
@@ -82,19 +82,19 @@
       <div class="post-content">
         
         <p>查看端口监听</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netstat -nlp</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plain">netstat -nlp<br></code></pre></td></tr></table></figure>
 
 <p>查看进程</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ps -aux</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plain">ps -aux<br></code></pre></td></tr></table></figure>
 
 <p>连接 postgresql</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">psql -h 127.0.0.1 -p 5432 -U user -d dbname</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plain">psql -h 127.0.0.1 -p 5432 -U user -d dbname<br></code></pre></td></tr></table></figure>
 
 <p>连接 redis</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">redis-cli -h 127.0.0.1 -p 6379 -a &quot;password&quot;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plain">redis-cli -h 127.0.0.1 -p 6379 -a &quot;password&quot;<br></code></pre></td></tr></table></figure>
 
 <p>安装 Docker</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -fsSL https:&#x2F;&#x2F;get.docker.com -o get-docker.sh | sh get-docker.sh</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plain">curl -fsSL https:&#x2F;&#x2F;get.docker.com -o get-docker.sh | sh get-docker.sh<br></code></pre></td></tr></table></figure>
         <a class="More" href="/2019/12/31/common-linux-command/">查看全文</a>
         
       </div>
