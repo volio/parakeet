@@ -33,3 +33,9 @@ redis-cli -h 127.0.0.1 -p 6379 -a "password"
 ```
 curl -fsSL https://get.docker.com -o get-docker.sh | sh get-docker.sh
 ```
+
+Kafka Console Consumer
+
+```
+kafka-console-consumer.sh --bootstrap-server kafka-server:9092 --topic topicname
+```
