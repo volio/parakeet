@@ -69,6 +69,9 @@
 <p>Kafka Console Consumer</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plain">kafka-console-consumer.sh --bootstrap-server kafka-server:9092 --topic topicname<br></code></pre></td></tr></table></figure>
 
+<p>使用 Docker 运行一个带密码的 Redis 测试容器 （开启 AOF 快照， 公网映射）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plain">docker run -d --name redis -e REDIS_PASSWORD&#x3D;YOURREDISPASSWORD -p 6390:6379 --restart always redis &#x2F;bin&#x2F;sh -c &#39;redis-server --appendonly yes --requirepass $&#123;REDIS_PASSWORD&#125;&#39;<br></code></pre></td></tr></table></figure>
+
     </div>
     <div class="post-meta">
         <span class="post-time">2019-12-31</span>
