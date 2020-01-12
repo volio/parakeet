@@ -39,3 +39,9 @@ Kafka Console Consumer
 ```
 kafka-console-consumer.sh --bootstrap-server kafka-server:9092 --topic topicname
 ```
+
+使用 Docker 运行一个带密码的 Redis 测试容器 （开启 AOF 快照， 公网映射）
+
+```
+docker run -d --name redis -e REDIS_PASSWORD=YOURREDISPASSWORD -p 6390:6379 --restart always redis /bin/sh -c 'redis-server --appendonly yes --requirepass ${REDIS_PASSWORD}'
+```
