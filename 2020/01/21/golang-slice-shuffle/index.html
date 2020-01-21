@@ -3,7 +3,7 @@
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
-    <title>常用工具（持续更新） - Parakeet</title>
+    <title>Golang Slice Shuffle - Parakeet</title>
     <link rel="shortcut icon" href="/favicon.png">
     <link href="https://fonts.googleapis.com/css?family=Noto+Serif+SC:400,700|Noto+Serif:400,400i&display=swap"
         rel="stylesheet">
@@ -48,14 +48,15 @@
   <main class="main">
     <article class="post">
     <div class="post-title">
-        <h1 class="title">常用工具（持续更新）</h2>
+        <h1 class="title">Golang Slice Shuffle</h2>
     </div>
     <div class="post-content">
-        <p>Redis 容量预估：<a href="http://www.redis.cn/redis_memory/" target="_blank" rel="noopener">链接</a></p>
+        <p>使用 rand 包提供的 Shuffle 方法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs plain">package main<br><br>import (<br>	&quot;fmt&quot;<br>	&quot;math&#x2F;rand&quot;<br>	&quot;strings&quot;<br>)<br><br>func main() &#123;<br>	words :&#x3D; strings.Fields(&quot;ink runs from the corners of my mouth&quot;)<br>	rand.Shuffle(len(words), func(i, j int) &#123;<br>		words[i], words[j] &#x3D; words[j], words[i]<br>	&#125;)<br>	fmt.Println(words)<br><br>&#125;<br></code></pre></td></tr></table></figure>
 
     </div>
     <div class="post-meta">
-        <span class="post-time">2020-01-08</span>
+        <span class="post-time">2020-01-21</span>
     </div>
 </article>
 
@@ -63,14 +64,11 @@
     
 <div class="prev">
     
-    <a href="/2020/01/21/golang-slice-shuffle/" class="alignleft prev"
-        title="Golang Slice Shuffle">&lt;= Golang Slice Shuffle</a>
-    
 </div>
 <div class="next">
     
-    <a href="/2020/01/07/systemd/" class="alignright next"
-        title="Systemd 配置">Systemd 配置 =&gt;</a>
+    <a href="/2020/01/08/common-tools/" class="alignright next"
+        title="常用工具（持续更新）">常用工具（持续更新） =&gt;</a>
     
 </div>
 
