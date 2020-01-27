@@ -72,6 +72,9 @@
 <p>使用 Docker 运行一个带密码的 Redis 测试容器 （开启 AOF 快照， 公网映射）</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plain">docker run -d --name redis -e REDIS_PASSWORD&#x3D;YOURREDISPASSWORD -p 6390:6379 --restart always redis &#x2F;bin&#x2F;sh -c &#39;redis-server --appendonly yes --requirepass $&#123;REDIS_PASSWORD&#125;&#39;<br></code></pre></td></tr></table></figure>
 
+<p>创建 Swap 分区</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs plain">dd if&#x3D;&#x2F;dev&#x2F;zero of&#x3D;&#x2F;opt&#x2F;swap&#x2F;swapfile bs&#x3D;1024 count&#x3D;6291456 &#x2F;&#x2F;6G swap<br>chmod 600 &#x2F;opt&#x2F;swap&#x2F;swapfile<br>mkswap &#x2F;opt&#x2F;swap&#x2F;swapfile<br>swapon &#x2F;opt&#x2F;swap&#x2F;swapfile<br>echo &quot;&#x2F;opt&#x2F;swap&#x2F;swapfile swap swap defaults 0 0&quot;&gt;&gt;&#x2F;etc&#x2F;fstab<br></code></pre></td></tr></table></figure>
+
     </div>
     <div class="post-meta">
         <span class="post-time">2019-12-31</span>
