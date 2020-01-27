@@ -45,3 +45,13 @@ kafka-console-consumer.sh --bootstrap-server kafka-server:9092 --topic topicname
 ```
 docker run -d --name redis -e REDIS_PASSWORD=YOURREDISPASSWORD -p 6390:6379 --restart always redis /bin/sh -c 'redis-server --appendonly yes --requirepass ${REDIS_PASSWORD}'
 ```
+
+创建 Swap 分区
+
+```
+dd if=/dev/zero of=/opt/swap/swapfile bs=1024 count=6291456 //6G swap
+chmod 600 /opt/swap/swapfile
+mkswap /opt/swap/swapfile
+swapon /opt/swap/swapfile
+echo "/opt/swap/swapfile swap swap defaults 0 0">>/etc/fstab
+```
