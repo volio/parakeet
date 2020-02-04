@@ -55,3 +55,21 @@ mkswap /opt/swap/swapfile
 swapon /opt/swap/swapfile
 echo "/opt/swap/swapfile swap swap defaults 0 0">>/etc/fstab
 ```
+
+PostgreSQL 批量插入存储过程
+
+```
+CREATE FUNCTION insert(count_ integer) RETURNS integer
+    LANGUAGE plpgsql AS
+
+$$
+BEGIN
+    WHILE count_ > 0
+        LOOP
+            INSERT INTO table (column) VALUES (value);
+            count_ = count_ - 1;
+        END LOOP ;
+    RETURN count_;
+END
+$$
+```
