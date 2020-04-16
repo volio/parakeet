@@ -17,8 +17,6 @@
 <link rel="stylesheet" href="/css/style.css">
 
     
-        <link href="https://cdn.jsdelivr.net/npm/disqusjs@1.2.6/dist/disqusjs.css" rel="stylesheet">
-    
 <meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="Parakeet" type="application/atom+xml">
 </head>
 
@@ -78,40 +76,6 @@
 
 <div class="post-comment">
     
-<section id="comments" class="comments">
-    <div id="disqus_thread"></div>
-    <script async crossorigin src="https://cdn.jsdelivr.net/npm/disqusjs@1.2.6/dist/disqus.js" id="disqusjs-script"></script>
-    <script>
-        document.getElementById("disqusjs-script").addEventListener("load", function () {
-            setTimeout(function () {
-                function loadDisqus() {
-                    new DisqusJS({
-                        shortname: "parakeets",
-                        siteName: "Parakeet",
-                        api: "https://disqus.niconico.in/api/",
-                        apikey: "3pn2LVaLGvYCddTYPQ54Q3XR1mkOKdKlyTLf1QePJcTUljCIjObDLIj4Adz4oswp",
-                    })
-                }
-
-                var runningOnBrowser = typeof window !== "undefined";
-                var isBot = runningOnBrowser && !("onscroll" in window) || typeof navigator !== "undefined" && /(gle|ing|ro|msn)bot|crawl|spider|yand|duckgo/i.test(navigator.userAgent);
-                var supportsIntersectionObserver = runningOnBrowser && "IntersectionObserver" in window;
-                if (!isBot && supportsIntersectionObserver) {
-                    var disqusObserver = new IntersectionObserver(function (entries) {
-                        if (entries[0].isIntersecting) {
-                            loadDisqus();
-                            disqusObserver.disconnect();
-                        }
-                    }, { threshold: [0] });
-                    disqusObserver.observe(document.getElementById('disqus_thread'));
-                } else {
-                    loadDisqus();
-                }
-            }, 1)
-        }, !0);
-    </script>
-</section>
-
 
 
 </div>
