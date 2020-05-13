@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://niconiconi.org/"/>
-  <updated>2020-04-16T10:17:18.249Z</updated>
+  <updated>2020-05-13T03:33:28.775Z</updated>
   <id>https://niconiconi.org/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://niconiconi.org/2020/01/21/golang-slice-shuffle/"/>
     <id>https://niconiconi.org/2020/01/21/golang-slice-shuffle/</id>
     <published>2020-01-21T09:28:00.000Z</published>
-    <updated>2020-04-16T10:17:18.249Z</updated>
+    <updated>2020-05-13T03:33:28.775Z</updated>
     
     <content type="html"><![CDATA[<p>使用 rand 包提供的 Shuffle 方法</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs plain">package main<br><br>import (<br>&quot;fmt&quot;<br>&quot;math&#x2F;rand&quot;<br>&quot;strings&quot;<br>)<br><br>func main() &#123;<br>words :&#x3D; strings.Fields(&quot;ink runs from the corners of my mouth&quot;)<br>rand.Shuffle(len(words), func(i, j int) &#123;<br>words[i], words[j] &#x3D; words[j], words[i]<br>&#125;)<br>fmt.Println(words)<br><br>&#125;<br></code></pre></td></tr></table></figure>]]></content>
     
@@ -42,7 +42,7 @@
     <link href="https://niconiconi.org/2020/01/08/common-tools/"/>
     <id>https://niconiconi.org/2020/01/08/common-tools/</id>
     <published>2020-01-08T10:48:00.000Z</published>
-    <updated>2020-04-16T10:17:18.249Z</updated>
+    <updated>2020-05-13T03:33:28.775Z</updated>
     
     <content type="html"><![CDATA[<p>Redis 容量预估：<a href="http://www.redis.cn/redis_memory/" target="_blank" rel="noopener">链接</a></p>]]></content>
     
@@ -62,7 +62,7 @@
     <link href="https://niconiconi.org/2020/01/07/systemd/"/>
     <id>https://niconiconi.org/2020/01/07/systemd/</id>
     <published>2020-01-07T06:00:00.000Z</published>
-    <updated>2020-04-16T10:17:18.249Z</updated>
+    <updated>2020-05-13T03:33:28.775Z</updated>
     
     <content type="html"><![CDATA[<h2 id="自动重启配置"><a href="#自动重启配置" class="headerlink" title="自动重启配置"></a>自动重启配置</h2><p>自动重启主要依赖三个配置参数，分别是 Restart、 StartLimitIntervalSec 和 StartLimitBurst。</p><h3 id="Restart"><a href="#Restart" class="headerlink" title="Restart"></a>Restart</h3><ul><li>no：不会重启</li><li>on-success：正常退出时重启</li><li>on-failure：非正常退出时重启</li><li>on-abnormal：被信号终止或超时时重启</li><li>on-watchdog</li><li>on-abort</li><li>always：只要退出就重启</li></ul><h3 id="频率限制"><a href="#频率限制" class="headerlink" title="频率限制"></a>频率限制</h3><p>StartLimitIntervalSec 用于指定一个重启间隔，默认为 10。StartLimitBurst 指在上述重启间隔内进程最多重启的次数。</p><h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><p>综合以上三个参数，给出的示例配置如下：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs plain">StartLimitIntervalSec&#x3D;14400<br>StartLimitBurst&#x3D;10<br>Restart&#x3D;on-failure<br></code></pre></td></tr></table></figure><p>代表 14400 秒内最多允许进程重启十次，当非正常退出时重启。</p>]]></content>
     
@@ -95,7 +95,7 @@
     <link href="https://niconiconi.org/2019/12/31/common-linux-command/"/>
     <id>https://niconiconi.org/2019/12/31/common-linux-command/</id>
     <published>2019-12-31T11:00:00.000Z</published>
-    <updated>2020-04-16T10:17:18.249Z</updated>
+    <updated>2020-05-13T03:33:28.775Z</updated>
     
     <content type="html"><![CDATA[<p>查看端口监听</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plain">netstat -nlp<br></code></pre></td></tr></table></figure><p>查看进程</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plain">ps -aux<br></code></pre></td></tr></table></figure><p>连接 postgresql</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plain">psql -h 127.0.0.1 -p 5432 -U user -d dbname<br></code></pre></td></tr></table></figure><p>连接 redis</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plain">redis-cli -h 127.0.0.1 -p 6379 -a &quot;password&quot;<br></code></pre></td></tr></table></figure><p>安装 Docker</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plain">curl -fsSL https:&#x2F;&#x2F;get.docker.com -o get-docker.sh | sh get-docker.sh<br></code></pre></td></tr></table></figure><p>Kafka Console Consumer</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plain">kafka-console-consumer.sh --bootstrap-server kafka-server:9092 --topic topicname<br></code></pre></td></tr></table></figure><p>使用 Docker 运行一个带密码的 Redis 测试容器 （开启 AOF 快照， 公网映射）</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plain">docker run -d --name redis -e REDIS_PASSWORD&#x3D;YOURREDISPASSWORD -p 6390:6379 --restart always redis &#x2F;bin&#x2F;sh -c &#39;redis-server --appendonly yes --requirepass $&#123;REDIS_PASSWORD&#125;&#39;<br></code></pre></td></tr></table></figure><p>创建 Swap 分区</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs plain">dd if&#x3D;&#x2F;dev&#x2F;zero of&#x3D;&#x2F;opt&#x2F;swap&#x2F;swapfile bs&#x3D;1024 count&#x3D;6291456 &#x2F;&#x2F;6G swap<br>chmod 600 &#x2F;opt&#x2F;swap&#x2F;swapfile<br>mkswap &#x2F;opt&#x2F;swap&#x2F;swapfile<br>swapon &#x2F;opt&#x2F;swap&#x2F;swapfile<br>echo &quot;&#x2F;opt&#x2F;swap&#x2F;swapfile swap swap defaults 0 0&quot;&gt;&gt;&#x2F;etc&#x2F;fstab<br></code></pre></td></tr></table></figure><p>PostgreSQL 批量插入存储过程</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs plain">CREATE FUNCTION insert(count_ integer) RETURNS integer<br>    LANGUAGE plpgsql AS<br><br>$$<br>BEGIN<br>    WHILE count_ &gt; 0<br>        LOOP<br>            INSERT INTO table (column) VALUES (value);<br>            count_ &#x3D; count_ - 1;<br>        END LOOP ;<br>    RETURN count_;<br>END<br>$$<br></code></pre></td></tr></table></figure>]]></content>
     
@@ -127,7 +127,7 @@
     <link href="https://niconiconi.org/2019/12/31/hello-world/"/>
     <id>https://niconiconi.org/2019/12/31/hello-world/</id>
     <published>2019-12-31T04:39:00.000Z</published>
-    <updated>2020-04-16T10:17:18.249Z</updated>
+    <updated>2020-05-13T03:33:28.775Z</updated>
     
     <content type="html"><![CDATA[<p>使用 hexo 进行写作</p>]]></content>
     
