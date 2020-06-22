@@ -73,3 +73,9 @@ BEGIN
 END
 $$
 ```
+
+nohup 后台运行
+
+```
+nohup command  2>&1 > stdout.log &
+```
