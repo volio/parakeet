@@ -27,7 +27,7 @@ StartLimitIntervalSec 用于指定一个重启间隔，默认为 10。StartLimit
 综合以上三个参数，给出的示例配置如下：
 
 ```
-StartLimitIntervalSec=14400
+StartLimitInterval=14400
 StartLimitBurst=10
 Restart=on-failure
 ```
