@@ -81,7 +81,7 @@
 </ul>
 <h3 id="频率限制"><a href="#频率限制" class="headerlink" title="频率限制"></a>频率限制</h3><p>StartLimitIntervalSec 用于指定一个重启间隔，默认为 10。StartLimitBurst 指在上述重启间隔内进程最多重启的次数。</p>
 <h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><p>综合以上三个参数，给出的示例配置如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs plain">StartLimitIntervalSec&#x3D;14400<br>StartLimitBurst&#x3D;10<br>Restart&#x3D;on-failure<br></code></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs plain">StartLimitInterval&#x3D;14400<br>StartLimitBurst&#x3D;10<br>Restart&#x3D;on-failure<br></code></pre></td></tr></table></figure>
 
 <p>代表 14400 秒内最多允许进程重启十次，当非正常退出时重启。</p>
 
